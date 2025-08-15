@@ -110,7 +110,7 @@ def identchipv1():
             device_erase_size = 11
         elif chipid == 0x59:
             device_flash_size = 64
-            device_erase_size = 11
+            device_erase_size = 15
     else:
         errorexit('ident chip')
     cfganswer = sendcmd((0xbb, 0x00))
@@ -130,7 +130,7 @@ def identchipv2():
             device_erase_size = 11
         elif chipid == 0x59:
             device_flash_size = 64
-            device_erase_size = 11
+            device_erase_size = 15
     else:
         errorexit('ident chip')
     cfganswer = sendcmd((0xa7, 0x02, 0x00, 0x1f, 0x00))
